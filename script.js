@@ -13,13 +13,13 @@ form.addEventListener("submit", (e) => {
 
 function validate(age, name) {
   if (!age || !name) {
-    return Promise.reject("Please enter valid details.");
+    return alert("Please enter valid details.");
   }
 
   if (age < 18) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        reject("Oh sorry. You aren't old enough.");
+        reject("Oh sorry ${name}. You aren't old enough.");
       }, 4000);
     });
   } else {
